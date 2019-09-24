@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:clipToPadding="true"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rvParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvIdTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id : "
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvIdValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/tvIdTitle"
+            android:text="###"
+            android:textColor="#000" />
+
+
+        <TextView
+            android:id="@+id/tvNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvIdValue"
+            android:layout_marginTop="8dp"
+            android:text="Name : "
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvIdValue"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/tvNameTitle"
+            android:text="########## #####"
+            android:textColor="#000" />
+
+
+        <TextView
+            android:id="@+id/tvMobileNoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameValue"
+            android:layout_marginTop="8dp"
+            android:text="Mobile No. : "
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvMobileNoValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameValue"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/tvMobileNoTitle"
+            android:text="##########"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tvCourseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMobileNoValue"
+            android:layout_marginTop="8dp"
+            android:text="Course. : "
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvCourseValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMobileNoValue"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/tvCourseTitle"
+            android:text="##### ####### ###"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tvCourseCompleteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCourseValue"
+            android:layout_marginTop="8dp"
+            android:text="Course Completed : "
+            android:textColor="#444" />
+
+        <TextView
+            android:id="@+id/tvCourseCompleteValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCourseValue"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/tvCourseCompleteTitle"
+            android:text="###"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tvYearValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange"
+            android:paddingHorizontal="4dp"
+            android:text="####"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

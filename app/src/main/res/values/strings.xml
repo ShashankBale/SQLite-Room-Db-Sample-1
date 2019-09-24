@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SQLite Room Db Demo</string>
+    <string-array name="course_array">
+
+        <item>Java Training Program</item>
+        <item>Big Data &amp; Analytics</item>
+        <item>Python Training</item>
+        <item>MEAN Stack Training</item>
+        <item>Software Testing</item>
+        <item>Android Development</item>
+        <item>Web Design</item>
+        <item>Digital Marketing</item>
+        <item>Internet of Things Training</item>
+        <item>Container Management</item>
+        <item>AWS Training</item>
+        <item>Shell Scripting Training</item>
+        <item>SAP</item>
+        <item>C &amp; C++</item>
+
+    </string-array>
+</resources>
