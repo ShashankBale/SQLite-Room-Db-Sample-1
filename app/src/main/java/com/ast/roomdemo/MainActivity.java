@@ -1,4 +1,4 @@
-package com.asterixsolution.sqliteroomdbdemo;
+package com.ast.roomdemo;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -15,10 +15,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asterixsolution.sqliteroomdbdemo.db.AsterixSolnDatabase;
-import com.asterixsolution.sqliteroomdbdemo.db.DbClient;
-import com.asterixsolution.sqliteroomdbdemo.db.dao.StudentDao;
-import com.asterixsolution.sqliteroomdbdemo.db.entity.Student;
+import com.ast.roomdemo.db.AsterixSolnDatabase;
+import com.ast.roomdemo.db.DbBuilderSingleton;
+import com.ast.roomdemo.db.dao.StudentDao;
+import com.ast.roomdemo.db.entity.Student;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity implements StudentAdapter.On
     }
 
     private List<Student> getData() {
-        DbClient dbClient = DbClient.getInstance(getApplicationContext());
-        AsterixSolnDatabase db = dbClient.getDb();
+        DbBuilderSingleton dbs = DbBuilderSingleton.getInstance(getApplicationContext());
+        AsterixSolnDatabase db = dbs.getDb();
         StudentDao studentDao = db.getStudentDao();
         return studentDao.getAll();
     }
@@ -129,6 +129,12 @@ public class MainActivity extends AppCompatActivity implements StudentAdapter.On
         List<Student> alDbStudent;
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pbStudent.setVisibility(View.VISIBLE);
+        }
+
+        @Override
         protected Boolean doInBackground(Void... voids) {
             alDbStudent = getData();
             return true;
@@ -137,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements StudentAdapter.On
         @Override
         protected void onPostExecute(Boolean flag) {
             super.onPostExecute(flag);
+            pbStudent.setVisibility(View.GONE);
             if (flag != null && flag == true) {
                 updateStudentUI(alDbStudent);
             } else {

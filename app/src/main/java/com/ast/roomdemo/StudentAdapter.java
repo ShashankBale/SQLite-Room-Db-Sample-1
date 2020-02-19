@@ -1,4 +1,4 @@
-package com.asterixsolution.sqliteroomdbdemo;
+package com.ast.roomdemo;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asterixsolution.sqliteroomdbdemo.db.entity.Student;
+import com.ast.roomdemo.db.entity.Student;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.asterixsolution.sqliteroomdbdemo.db.dao;
+package com.ast.roomdemo.db.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,7 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 
-import com.asterixsolution.sqliteroomdbdemo.db.entity.Student;
+import com.ast.roomdemo.db.entity.Student;
 
 import java.util.List;
 

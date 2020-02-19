@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.asterixsolution.sqliteroomdbdemo">
+    package="com.ast.roomdemo">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.asterixsolution.sqliteroomdbdemo.MainActivity">
+        <activity android:name="com.ast.roomdemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,11 +18,11 @@
         </activity>
 
         <activity
-            android:name="com.asterixsolution.sqliteroomdbdemo.AddStudentActivity"
+            android:name="com.ast.roomdemo.AddStudentActivity"
             android:label="Add New Student" />
 
         <activity
-            android:name="com.asterixsolution.sqliteroomdbdemo.UpdateStudentActivity"
+            android:name="com.ast.roomdemo.UpdateStudentActivity"
             android:label="Update Student Details" />
 
 

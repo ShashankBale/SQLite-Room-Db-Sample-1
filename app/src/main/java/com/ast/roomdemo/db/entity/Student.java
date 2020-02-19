@@ -1,4 +1,4 @@
-package com.asterixsolution.sqliteroomdbdemo.db.entity;
+package com.ast.roomdemo.db.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

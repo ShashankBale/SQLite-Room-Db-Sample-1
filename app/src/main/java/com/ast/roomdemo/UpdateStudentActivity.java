@@ -1,4 +1,4 @@
-package com.asterixsolution.sqliteroomdbdemo;
+package com.ast.roomdemo;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -18,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.asterixsolution.sqliteroomdbdemo.db.DbClient;
-import com.asterixsolution.sqliteroomdbdemo.db.entity.Student;
+import com.ast.roomdemo.db.DbBuilderSingleton;
+import com.ast.roomdemo.db.entity.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -225,8 +225,8 @@ public class UpdateStudentActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Student... students) {
             Student student = students[0];
-            DbClient dbClient = DbClient.getInstance(getApplicationContext());
-            dbClient.getDb().getStudentDao().update(student);
+            DbBuilderSingleton dbs = DbBuilderSingleton.getInstance(getApplicationContext());
+            dbs.getDb().getStudentDao().update(student);
             return null;
         }
 
@@ -248,8 +248,8 @@ public class UpdateStudentActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Student... students) {
             Student student = students[0];
-            DbClient dbClient = DbClient.getInstance(getApplicationContext());
-            dbClient.getDb().getStudentDao().delete(student);
+            DbBuilderSingleton dbs = DbBuilderSingleton.getInstance(getApplicationContext());
+            dbs.getDb().getStudentDao().delete(student);
             return null;
         }
 
